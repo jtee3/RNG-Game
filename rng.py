@@ -4,7 +4,7 @@ import streamlit as st
 """
 Hello, My name is Jaytee Okonkwo and this is my Random Number Generator Guessing Game"
 """
-# Initialization for session state
+
 if "correct_number" not in st.session_state:
     st.session_state.correct_number = random.randint(1, 100)
     st.session_state.attempts = 0
@@ -39,17 +39,17 @@ def reset_game():
     st.session_state.feedback = ""
     st.session_state.user_guess = ""
 
-# Streamlit user interface
-st.title("Random Number Guessing Game")
-st.write("Guess the number I'm thinking of between 1 and 100!")
 
-# Inputs and buttons for submitting ang guessing
+st.title("Random Number Guessing Game")
+st.write("Guess a number between 1 and 100 !")
+
+
 user_guess = st.text_input(
     "Enter your guess:", key="user_guess", on_change=inspect_user_guess
 )
 
 st.button("Reset Game", on_click=reset_game)
 
-# Feedback display
+
 if st.session_state.feedback:
     st.write(st.session_state.feedback)
