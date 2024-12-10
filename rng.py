@@ -40,7 +40,7 @@ def reset_game():
     st.session_state.user_guess = ""
 
 # Streamlit user interface
-st.title("Number Guessing Game")
+st.title("Random Number Guessing Game")
 st.write("Guess the number I'm thinking of between 1 and 100!")
 
 # Inputs and buttons for submitting ang guessing
